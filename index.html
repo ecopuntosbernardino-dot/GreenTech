@@ -9,6 +9,10 @@
 
     <style>
 
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -17,8 +21,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #e9e2cc;
-            color: #35452f;
+            background: #eee8d5;
+            color: #394b35;
         }
 
         /* =========================
@@ -28,11 +32,15 @@
         header {
             background: linear-gradient(135deg, #a8c686, #789b5b);
             min-height: 190px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 30px 20px;
+
             box-shadow: 0 5px 18px rgba(60, 80, 45, 0.25);
         }
 
@@ -55,15 +63,14 @@
             font-size: 17px;
         }
 
-
         /* =========================
-           CONTENEDOR
+           CONTENEDOR PRINCIPAL
         ========================= */
 
         .container {
-            width: 92%;
-            max-width: 1200px;
-            margin: 45px auto;
+            width: 94%;
+            max-width: 1400px;
+            margin: 40px auto;
         }
 
         .section-title {
@@ -72,7 +79,7 @@
         }
 
         .section-title h2 {
-            font-size: 32px;
+            font-size: 31px;
             color: #4f7046;
             margin-bottom: 8px;
         }
@@ -81,38 +88,50 @@
             color: #68725f;
         }
 
-
         /* =========================
            PREMIOS
         ========================= */
 
         .premios {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+
+            grid-template-columns:
+                repeat(6, 1fr);
+
             gap: 18px;
-            max-width: 1050px;
-            margin: auto;
+
+            max-width: 1100px;
+
+            margin: 0 auto 55px;
         }
 
         .premio {
-            background: #f7f2e4;
-            border: 2px solid #a8c686;
+            background: #f8f4e8;
+
+            border: 2px solid #b5c99a;
+
             border-radius: 18px;
-            padding: 25px 15px;
+
+            padding: 25px 18px;
+
             text-align: center;
+
             min-height: 190px;
-            box-shadow: 0 7px 18px rgba(70, 90, 55, 0.15);
+
+            box-shadow:
+                0 6px 18px rgba(70, 90, 55, 0.13);
+
             transition: 0.3s;
         }
 
         .premio:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(70, 90, 55, 0.25);
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 25px rgba(70, 90, 55, 0.22);
         }
 
-        /*
-        Primera fila: 3 premios
-        */
+        /* PRIMERA FILA */
 
         .premio:nth-child(1) {
             grid-column: 1 / 3;
@@ -126,9 +145,7 @@
             grid-column: 5 / 7;
         }
 
-        /*
-        Segunda fila: 2 premios centrados
-        */
+        /* SEGUNDA FILA */
 
         .premio:nth-child(4) {
             grid-column: 2 / 4;
@@ -138,32 +155,88 @@
             grid-column: 4 / 6;
         }
 
-        .premio .numero {
+        .numero {
             width: 52px;
             height: 52px;
-            margin: auto;
+
+            margin: 0 auto 15px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 50%;
-            background: #8faf72;
+
+            background: #83a866;
+
             color: white;
+
             font-size: 23px;
+
             font-weight: bold;
-            margin-bottom: 15px;
         }
 
         .premio h3 {
             color: #4f7046;
+
             margin-bottom: 12px;
+
             font-size: 20px;
         }
 
         .premio p {
             color: #68725f;
+
             line-height: 1.5;
         }
 
+        /* =========================
+           ZONA DE RANKING Y CURSOS
+        ========================= */
+
+        .tablas-principales {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 28px;
+
+            align-items: start;
+
+            margin-bottom: 50px;
+        }
+
+        .panel {
+
+            background: #f8f4e8;
+
+            border: 2px solid #c5d1ad;
+
+            border-radius: 18px;
+
+            padding: 18px;
+
+            box-shadow:
+                0 7px 18px rgba(70, 90, 55, 0.13);
+
+            overflow: hidden;
+        }
+
+        .panel-title {
+
+            text-align: center;
+
+            color: #4f7046;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            margin-bottom: 18px;
+        }
 
         /* =========================
            TABLAS
@@ -171,210 +244,288 @@
 
         .table-container {
             overflow-x: auto;
-            background: #f7f2e4;
-            border-radius: 18px;
-            padding: 10px;
-            box-shadow: 0 7px 18px rgba(70, 90, 55, 0.15);
-            margin-bottom: 45px;
         }
 
         table {
+
             width: 100%;
+
             border-collapse: collapse;
-            min-width: 600px;
+
+            min-width: 500px;
         }
 
         th {
-            background: #6f8f5b;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
+
+            background: #dce8c9;
+
+            color: #4f7046;
+
+            padding: 14px 10px;
+
+            font-size: 15px;
+
             text-align: center;
+
+            border-bottom:
+                2px solid #b7c99b;
         }
 
         td {
-            padding: 15px;
-            border-bottom: 1px solid #d7d8bd;
+
+            padding: 12px 10px;
+
             color: #4f5d48;
+
             text-align: center;
+
+            border-bottom:
+                1px solid #d8ddc9;
         }
 
         tr:hover td {
-            background: #edf0df;
+
+            background: #edf1e4;
         }
 
-
         /* =========================
-           TOP 5 DESTACADOS
+           TOP 5
         ========================= */
 
         .top-5 {
-            background: #dce8c9;
+
+            background: #e1edce;
+
             font-weight: bold;
         }
 
         .top-5 td {
-            color: #36532f;
-            font-size: 17px;
+
+            color: #38582f;
+
+            font-size: 16px;
         }
 
-        .top-5:first-child {
-            background: #c9dda9;
-        }
+        .top-5 td:first-child {
 
-        .top-5 .ranking-position {
-            color: #456c39;
-            font-size: 21px;
+            font-size: 19px;
+
             font-weight: 900;
-        }
 
+            color: #4d793c;
+        }
 
         /* =========================
-           ÚLTIMOS 5
+           PUESTOS 6 - 10
         ========================= */
 
         .last-5 {
+
             opacity: 0.72;
         }
 
         .last-5 td {
-            color: #737b6c;
+
+            color: #777e71;
         }
 
-        .ranking-position {
-            font-weight: bold;
-        }
+        /* =========================
+           VALORES
+        ========================= */
 
         .kg {
+
             font-weight: bold;
         }
 
         .points {
+
             font-weight: bold;
-            color: #58794c;
+
+            color: #5b7c4e;
         }
 
-
         /* =========================
-           GRADOS
+           CURSOS PARTICIPANTES
         ========================= */
 
+        .grados {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
         .grado {
-            margin-bottom: 14px;
-            border-radius: 14px;
+
+            border-radius: 12px;
+
             overflow: hidden;
-            background: #f7f2e4;
-            box-shadow: 0 5px 15px rgba(70, 90, 55, 0.13);
+
+            border:
+                1px solid #c5d1ad;
+
+            background: #faf7ec;
         }
 
         .grado-header {
+
             width: 100%;
+
             border: none;
-            background: #829f68;
+
+            background: #8aaa6d;
+
             color: white;
-            padding: 20px;
-            font-size: 20px;
+
+            padding: 15px 18px;
+
+            font-size: 17px;
+
             font-weight: bold;
+
             text-align: left;
+
             cursor: pointer;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
-            transition: 0.3s;
+
+            transition: 0.25s;
         }
 
         .grado-header:hover {
-            background: #718d5a;
+
+            background: #77995d;
         }
 
         .flecha {
-            font-size: 20px;
-            transition: 0.3s;
+
+            transition: 0.25s;
         }
 
         .grado.active .flecha {
-            transform: rotate(180deg);
+
+            transform:
+                rotate(180deg);
         }
 
         .grado-content {
+
             display: none;
-            padding: 10px;
+
+            padding: 8px;
         }
 
         .grado.active .grado-content {
+
             display: block;
         }
 
         .curso-table {
+
             margin: 0;
         }
 
         .curso-table th {
-            background: #a8c686;
-            color: #30462b;
-        }
 
+            background: #e4ecd4;
+        }
 
         /* =========================
            NOTICIAS Y ANUNCIOS
         ========================= */
 
         .noticias {
-            background: #f7f2e4;
-            border: 2px solid #b8c99d;
+
+            background: #f8f4e8;
+
+            border:
+                2px solid #b8c99d;
+
             border-radius: 18px;
+
             padding: 35px 25px;
+
             text-align: center;
-            box-shadow: 0 7px 18px rgba(70, 90, 55, 0.15);
-            margin-top: 20px;
+
+            box-shadow:
+                0 7px 18px rgba(70, 90, 55, 0.15);
         }
 
         .noticias .icono {
+
             font-size: 42px;
+
             margin-bottom: 12px;
         }
 
         .noticias h3 {
+
             color: #4f7046;
+
             font-size: 25px;
+
             margin-bottom: 10px;
         }
 
         .noticias p {
+
             color: #737b6c;
+
             font-size: 18px;
         }
-
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
+
             background: #536d45;
+
             text-align: center;
+
             padding: 30px 20px;
+
             margin-top: 55px;
         }
 
         footer h3 {
+
             color: #edf4dc;
+
             margin-bottom: 8px;
         }
 
         footer p {
+
             color: #d8e1c9;
         }
-
 
         /* =========================
            RESPONSIVE
         ========================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
+
+            .tablas-principales {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 800px) {
 
             .premios {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns: 1fr 1fr;
             }
 
             .premio:nth-child(1),
@@ -382,39 +533,48 @@
             .premio:nth-child(3),
             .premio:nth-child(4),
             .premio:nth-child(5) {
+
                 grid-column: auto;
             }
 
             .premio:nth-child(5) {
+
                 grid-column: 1 / 3;
+
                 max-width: 50%;
+
                 margin: auto;
+            }
+
+            .header-content h1 {
+
+                font-size: 36px;
             }
 
         }
 
-
         @media (max-width: 600px) {
 
-            .header-content h1 {
-                font-size: 34px;
-            }
-
-            .header-content h2 {
-                font-size: 21px;
-            }
-
-            .section-title h2 {
-                font-size: 27px;
-            }
-
             .premios {
+
                 grid-template-columns: 1fr;
             }
 
             .premio:nth-child(5) {
+
                 grid-column: auto;
+
                 max-width: 100%;
+            }
+
+            .header-content h1 {
+
+                font-size: 30px;
+            }
+
+            .header-content h2 {
+
+                font-size: 20px;
             }
 
         }
@@ -427,17 +587,21 @@
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      ENCABEZADO
-========================= -->
+===================================================== -->
 
 <header>
 
     <div class="header-content">
 
-        <h1>Eco Puntos Bernardino</h1>
+        <h1>
+            Eco Puntos Bernardino
+        </h1>
 
-        <h2>GREEN TECH</h2>
+        <h2>
+            GREEN TECH
+        </h2>
 
         <p>
             ♻️ Recicla • Acumula puntos • Gana premios
@@ -451,115 +615,139 @@
 <main class="container">
 
 
+<!-- =====================================================
+     PREMIOS
+===================================================== -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            🏆 Premios
+        </h2>
+
+        <p>
+            Los cursos con mejores resultados podrán ganar increíbles premios.
+        </p>
+
+    </div>
+
+
+    <div class="premios">
+
+
+        <div class="premio">
+
+            <div class="numero">
+                1
+            </div>
+
+            <h3>
+                Mañana Deportiva
+            </h3>
+
+            <p>
+                Una mañana deportiva en las canchas
+                del colegio para disfrutar con todo el curso.
+            </p>
+
+        </div>
+
+
+        <div class="premio">
+
+            <div class="numero">
+                2
+            </div>
+
+            <h3>
+                Día de Película
+            </h3>
+
+            <p>
+                Un día especial para disfrutar
+                de una película junto con todos los compañeros.
+            </p>
+
+        </div>
+
+
+        <div class="premio">
+
+            <div class="numero">
+                3
+            </div>
+
+            <h3>
+                Comida para el Curso
+            </h3>
+
+            <p>
+                Una comida para todo el curso.
+                ¡Podría ser una deliciosa pizza! 🍕
+            </p>
+
+        </div>
+
+
+        <div class="premio">
+
+            <div class="numero">
+                4
+            </div>
+
+            <h3>
+                Premio Sorpresa
+            </h3>
+
+            <p>
+                Una recompensa especial para celebrar
+                el esfuerzo y compromiso del curso.
+            </p>
+
+        </div>
+
+
+        <div class="premio">
+
+            <div class="numero">
+                5
+            </div>
+
+            <h3>
+                Actividad Especial
+            </h3>
+
+            <p>
+                Una actividad especial para disfrutar
+                junto con todos los compañeros.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RANKING + CURSOS
+===================================================== -->
+
+<section class="tablas-principales">
+
+
     <!-- =========================
-         PREMIOS
+         RANKING IZQUIERDA
     ========================= -->
 
-    <section>
+    <div class="panel">
 
-        <div class="section-title">
+        <div class="panel-title">
 
-            <h2>🏆 Premios</h2>
-
-            <p>
-                Los cursos con mejores resultados podrán ganar increíbles premios.
-            </p>
-
-        </div>
-
-
-        <div class="premios">
-
-
-            <div class="premio">
-
-                <div class="numero">1</div>
-
-                <h3>Mañana Deportiva</h3>
-
-                <p>
-                    Una mañana deportiva en las canchas del colegio
-                    para disfrutar con todo el curso.
-                </p>
-
-            </div>
-
-
-            <div class="premio">
-
-                <div class="numero">2</div>
-
-                <h3>Día de Película</h3>
-
-                <p>
-                    Un día especial para disfrutar de una película
-                    junto con todos los compañeros.
-                </p>
-
-            </div>
-
-
-            <div class="premio">
-
-                <div class="numero">3</div>
-
-                <h3>Comida para el Curso</h3>
-
-                <p>
-                    Una comida para todo el curso.
-                    ¡Podría ser una deliciosa pizza! 🍕
-                </p>
-
-            </div>
-
-
-            <div class="premio">
-
-                <div class="numero">4</div>
-
-                <h3>Premio Sorpresa</h3>
-
-                <p>
-                    Una recompensa especial para celebrar
-                    el esfuerzo y compromiso del curso.
-                </p>
-
-            </div>
-
-
-            <div class="premio">
-
-                <div class="numero">5</div>
-
-                <h3>Actividad Especial</h3>
-
-                <p>
-                    Una actividad especial para disfrutar
-                    junto con todos los compañeros.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         RANKING TOP 10
-========================= -->
-
-    <section>
-
-        <div class="section-title">
-
-            <h2>🥇 Ranking Top 10</h2>
-
-            <p>
-                Los 5 primeros puestos están destacados.
-            </p>
+            🥇 Ranking Top 10
 
         </div>
 
@@ -572,13 +760,21 @@
 
                     <tr>
 
-                        <th>Puesto</th>
+                        <th>
+                            Puesto
+                        </th>
 
-                        <th>Curso</th>
+                        <th>
+                            Curso
+                        </th>
 
-                        <th>Kilogramos (kg)</th>
+                        <th>
+                            Kilogramos (kg)
+                        </th>
 
-                        <th>Puntos</th>
+                        <th>
+                            Puntos
+                        </th>
 
                     </tr>
 
@@ -593,80 +789,84 @@
 
         </div>
 
-    </section>
+    </div>
 
 
 
     <!-- =========================
-         CURSOS
+         CURSOS DERECHA
     ========================= -->
 
-    <section>
+    <div class="panel">
 
-        <div class="section-title">
+        <div class="panel-title">
 
-            <h2>🏫 Cursos Participantes</h2>
-
-            <p>
-                Selecciona un grado para ver sus resultados.
-            </p>
+            🏫 Cursos Participantes
 
         </div>
 
 
-        <div id="grados-container">
-
+        <div
+            id="grados-container"
+            class="grados">
         </div>
 
-    </section>
+    </div>
 
 
+</section>
 
-    <!-- =========================
-         NOTICIAS
-    ========================= -->
 
-    <section>
+<!-- =====================================================
+     NOTICIAS
+===================================================== -->
 
-        <div class="section-title">
+<section>
 
-            <h2>📢 Noticias y anuncios</h2>
+    <div class="section-title">
 
-            <p>
-                Mantente informado sobre las novedades del proyecto.
-            </p>
+        <h2>
+            📢 Noticias y anuncios
+        </h2>
 
+        <p>
+            Mantente informado sobre las novedades del proyecto.
+        </p>
+
+    </div>
+
+
+    <div class="noticias">
+
+        <div class="icono">
+            📢
         </div>
 
+        <h3>
+            Sin novedades
+        </h3>
 
-        <div class="noticias">
+        <p>
+            Por el momento no hay noticias ni anuncios.
+        </p>
 
-            <div class="icono">
-                📢
-            </div>
+    </div>
 
-            <h3>Sin novedades</h3>
-
-            <p>
-                Por el momento no hay noticias ni anuncios.
-            </p>
-
-        </div>
-
-    </section>
+</section>
 
 
 </main>
 
 
-
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-    <h3>♻️ Eco Puntos Bernardino</h3>
+    <h3>
+        ♻️ Eco Puntos Bernardino
+    </h3>
 
     <p>
         Green Tech • Reciclando por un futuro mejor 🌱
@@ -679,26 +879,16 @@
 <script>
 
 
-/*
-============================================================
-    DATOS DE LOS CURSOS
-============================================================
+/* =====================================================
+   DATOS DE LOS CURSOS
 
-Aquí puedes modificar:
-
-kg: cantidad de kilogramos reciclados
-
-puntos: cantidad de puntos obtenidos
-
-Todos empiezan en 0.
-*/
+   MODIFICA KG Y PUNTOS AQUÍ.
+===================================================== */
 
 
 const cursos = [
 
-    // =====================
-    // OCTAVO
-    // =====================
+    /* OCTAVO */
 
     {
         nombre: "8 A",
@@ -736,9 +926,7 @@ const cursos = [
     },
 
 
-    // =====================
-    // NOVENO
-    // =====================
+    /* NOVENO */
 
     {
         nombre: "9 A",
@@ -776,9 +964,7 @@ const cursos = [
     },
 
 
-    // =====================
-    // DÉCIMO
-    // =====================
+    /* DÉCIMO */
 
     {
         nombre: "10 A",
@@ -816,9 +1002,7 @@ const cursos = [
     },
 
 
-    // =====================
-    // PRIMERO BACHILLERATO
-    // =====================
+    /* PRIMERO BACHILLERATO */
 
     {
         nombre: "Primero Ciencias A",
@@ -856,9 +1040,7 @@ const cursos = [
     },
 
 
-    // =====================
-    // SEGUNDO BACHILLERATO
-    // =====================
+    /* SEGUNDO BACHILLERATO */
 
     {
         nombre: "Segundo Ciencias A",
@@ -889,9 +1071,7 @@ const cursos = [
     },
 
 
-    // =====================
-    // TERCERO BACHILLERATO
-    // =====================
+    /* TERCERO BACHILLERATO */
 
     {
         nombre: "Tercero Ciencias A",
@@ -931,53 +1111,56 @@ const cursos = [
 ];
 
 
-
-/*
-============================================================
-    CREAR RANKING
-============================================================
-*/
+/* =====================================================
+   CREAR RANKING
+===================================================== */
 
 
 function crearRanking() {
 
-    const ranking = document.getElementById("ranking");
+    const ranking =
+        document.getElementById("ranking");
 
     ranking.innerHTML = "";
 
 
     /*
-    Primero ordenamos por kilogramos.
-    Si hay empate, se utilizan los puntos.
+       Orden:
+       1. Mayor cantidad de KG
+       2. Si hay empate, mayor cantidad de puntos
     */
 
-    const ordenados = [...cursos].sort((a, b) => {
+    const ordenados =
+        [...cursos].sort((a, b) => {
 
-        if (b.kg !== a.kg) {
+            if (b.kg !== a.kg) {
 
-            return b.kg - a.kg;
+                return b.kg - a.kg;
 
-        }
+            }
 
-        return b.puntos - a.puntos;
+            return b.puntos - a.puntos;
 
-    });
+        });
 
 
     /*
-    Mostramos los primeros 10.
+       Mostrar solamente los primeros 10.
     */
 
-    const top10 = ordenados.slice(0, 10);
+    const top10 =
+        ordenados.slice(0, 10);
 
 
     top10.forEach((curso, index) => {
 
-        const fila = document.createElement("tr");
+        const fila =
+            document.createElement("tr");
 
 
         /*
-        Los primeros 5 tendrán una clase especial.
+           Primeros 5 = destacados.
+           Puestos 6-10 = normales.
         */
 
         if (index < 5) {
@@ -993,7 +1176,7 @@ function crearRanking() {
 
         fila.innerHTML = `
 
-            <td class="ranking-position">
+            <td>
                 ${index + 1}
             </td>
 
@@ -1019,17 +1202,17 @@ function crearRanking() {
 }
 
 
-
-/*
-============================================================
-    CREAR TABLAS DE LOS GRADOS
-============================================================
-*/
+/* =====================================================
+   CREAR CURSOS PARTICIPANTES
+===================================================== */
 
 
 function crearGrados() {
 
-    const container = document.getElementById("grados-container");
+    const container =
+        document.getElementById(
+            "grados-container"
+        );
 
     container.innerHTML = "";
 
@@ -1037,10 +1220,15 @@ function crearGrados() {
     const grados = [
 
         "Octavo Grado",
+
         "Noveno Grado",
+
         "Décimo Grado",
+
         "Primero Bachillerato",
+
         "Segundo Bachillerato",
+
         "Tercero Bachillerato"
 
     ];
@@ -1049,14 +1237,15 @@ function crearGrados() {
     grados.forEach(grado => {
 
 
-        const cursosDelGrado = cursos.filter(
+        const cursosDelGrado =
+            cursos.filter(
+                curso => curso.grado === grado
+            );
 
-            curso => curso.grado === grado
 
-        );
+        const div =
+            document.createElement("div");
 
-
-        const div = document.createElement("div");
 
         div.className = "grado";
 
@@ -1108,25 +1297,33 @@ function crearGrados() {
 
                         <tbody>
 
-                            ${cursosDelGrado.map(curso => `
+                            ${
 
-                                <tr>
+                                cursosDelGrado
 
-                                    <td>
-                                        ${curso.nombre}
-                                    </td>
+                                .map(curso => `
 
-                                    <td class="kg">
-                                        ${curso.kg} kg
-                                    </td>
+                                    <tr>
 
-                                    <td class="points">
-                                        ${curso.puntos}
-                                    </td>
+                                        <td>
+                                            ${curso.nombre}
+                                        </td>
 
-                                </tr>
+                                        <td class="kg">
+                                            ${curso.kg} kg
+                                        </td>
 
-                            `).join("")}
+                                        <td class="points">
+                                            ${curso.puntos}
+                                        </td>
+
+                                    </tr>
+
+                                `)
+
+                                .join("")
+
+                            }
 
                         </tbody>
 
@@ -1146,30 +1343,26 @@ function crearGrados() {
 }
 
 
-
-/*
-============================================================
-    ABRIR / CERRAR GRADOS
-============================================================
-*/
+/* =====================================================
+   ABRIR / CERRAR GRADOS
+===================================================== */
 
 
 function toggleGrado(button) {
 
-    const grado = button.parentElement;
+    const grado =
+        button.parentElement;
 
-    grado.classList.toggle("active");
+    grado.classList.toggle(
+        "active"
+    );
 
 }
 
 
-
-/*
-============================================================
-    INICIAR PÁGINA
-============================================================
-*/
-
+/* =====================================================
+   INICIAR
+===================================================== */
 
 crearRanking();
 
