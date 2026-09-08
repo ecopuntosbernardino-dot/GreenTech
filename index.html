@@ -1,8 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Eco Puntos Bernardino | Green Tech</title>
@@ -21,9 +22,10 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #fed353;
+            background: #eee8d5;
             color: #394b35;
         }
+
 
         /* =========================
            ENCABEZADO
@@ -63,13 +65,14 @@
             font-size: 17px;
         }
 
+
         /* =========================
            CONTENEDOR PRINCIPAL
         ========================= */
 
         .container {
             width: 94%;
-            max-width: 1400px;
+            max-width: 1500px;
             margin: 40px auto;
         }
 
@@ -88,6 +91,7 @@
             color: #68725f;
         }
 
+
         /* =========================
            PREMIOS
         ========================= */
@@ -95,8 +99,7 @@
         .premios {
             display: grid;
 
-            grid-template-columns:
-                repeat(6, 1fr);
+            grid-template-columns: repeat(6, 1fr);
 
             gap: 18px;
 
@@ -131,6 +134,7 @@
                 0 12px 25px rgba(70, 90, 55, 0.22);
         }
 
+
         /* PRIMERA FILA */
 
         .premio:nth-child(1) {
@@ -145,6 +149,7 @@
             grid-column: 5 / 7;
         }
 
+
         /* SEGUNDA FILA */
 
         .premio:nth-child(4) {
@@ -154,6 +159,7 @@
         .premio:nth-child(5) {
             grid-column: 4 / 6;
         }
+
 
         .numero {
             width: 52px;
@@ -179,28 +185,24 @@
 
         .premio h3 {
             color: #4f7046;
-
             margin-bottom: 12px;
-
             font-size: 20px;
         }
 
         .premio p {
             color: #68725f;
-
             line-height: 1.5;
         }
 
+
         /* =========================
-           ZONA DE RANKING Y CURSOS
+           RANKING Y CURSOS
         ========================= */
 
         .tablas-principales {
-
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 28px;
 
@@ -210,7 +212,6 @@
         }
 
         .panel {
-
             background: #f8f4e8;
 
             border: 2px solid #c5d1ad;
@@ -226,7 +227,6 @@
         }
 
         .panel-title {
-
             text-align: center;
 
             color: #4f7046;
@@ -238,6 +238,7 @@
             margin-bottom: 18px;
         }
 
+
         /* =========================
            TABLAS
         ========================= */
@@ -247,16 +248,14 @@
         }
 
         table {
-
             width: 100%;
 
             border-collapse: collapse;
 
-            min-width: 500px;
+            min-width: 450px;
         }
 
         th {
-
             background: #dce8c9;
 
             color: #4f7046;
@@ -267,90 +266,114 @@
 
             text-align: center;
 
-            border-bottom:
-                2px solid #b7c99b;
+            border-bottom: 2px solid #b7c99b;
         }
 
         td {
-
             padding: 12px 10px;
 
             color: #4f5d48;
 
             text-align: center;
 
-            border-bottom:
-                1px solid #d8ddc9;
+            border-bottom: 1px solid #d8ddc9;
         }
 
         tr:hover td {
-
             background: #edf1e4;
         }
+
 
         /* =========================
            TOP 5
         ========================= */
 
         .top-5 {
-
             background: #e1edce;
-
             font-weight: bold;
         }
 
         .top-5 td {
-
             color: #38582f;
-
             font-size: 16px;
         }
 
         .top-5 td:first-child {
-
             font-size: 19px;
-
             font-weight: 900;
-
             color: #4d793c;
         }
+
 
         /* =========================
            PUESTOS 6 - 10
         ========================= */
 
         .last-5 {
-
             opacity: 0.72;
         }
 
         .last-5 td {
-
             color: #777e71;
         }
+
 
         /* =========================
            VALORES
         ========================= */
 
         .kg {
-
             font-weight: bold;
         }
 
         .points {
-
             font-weight: bold;
-
             color: #5b7c4e;
         }
 
+
         /* =========================
-           CURSOS PARTICIPANTES
+           BLOQUES EDUCATIVOS
+        ========================= */
+
+        .bloque-educativo {
+            margin-bottom: 25px;
+
+            border: 2px solid #b8c99d;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            background: #f8f4e8;
+        }
+
+        .bloque-titulo {
+            background: #6f8f5b;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 16px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .bloque-contenido {
+            padding: 12px;
+        }
+
+
+        /* =========================
+           GRADOS DESPLEGABLES
         ========================= */
 
         .grados {
-
             display: flex;
 
             flex-direction: column;
@@ -359,19 +382,16 @@
         }
 
         .grado {
-
             border-radius: 12px;
 
             overflow: hidden;
 
-            border:
-                1px solid #c5d1ad;
+            border: 1px solid #c5d1ad;
 
             background: #faf7ec;
         }
 
         .grado-header {
-
             width: 100%;
 
             border: none;
@@ -400,53 +420,44 @@
         }
 
         .grado-header:hover {
-
             background: #77995d;
         }
 
         .flecha {
-
             transition: 0.25s;
         }
 
         .grado.active .flecha {
-
-            transform:
-                rotate(180deg);
+            transform: rotate(180deg);
         }
 
         .grado-content {
-
             display: none;
 
             padding: 8px;
         }
 
         .grado.active .grado-content {
-
             display: block;
         }
 
         .curso-table {
-
             margin: 0;
         }
 
         .curso-table th {
-
             background: #e4ecd4;
         }
 
+
         /* =========================
-           NOTICIAS Y ANUNCIOS
+           NOTICIAS
         ========================= */
 
         .noticias {
-
             background: #f8f4e8;
 
-            border:
-                2px solid #b8c99d;
+            border: 2px solid #b8c99d;
 
             border-radius: 18px;
 
@@ -459,34 +470,27 @@
         }
 
         .noticias .icono {
-
             font-size: 42px;
-
             margin-bottom: 12px;
         }
 
         .noticias h3 {
-
             color: #4f7046;
-
             font-size: 25px;
-
             margin-bottom: 10px;
         }
 
         .noticias p {
-
             color: #737b6c;
-
             font-size: 18px;
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-
             background: #536d45;
 
             text-align: center;
@@ -497,16 +501,14 @@
         }
 
         footer h3 {
-
             color: #edf4dc;
-
             margin-bottom: 8px;
         }
 
         footer p {
-
             color: #d8e1c9;
         }
+
 
         /* =========================
            RESPONSIVE
@@ -515,16 +517,15 @@
         @media (max-width: 1000px) {
 
             .tablas-principales {
-
                 grid-template-columns: 1fr;
             }
 
         }
 
+
         @media (max-width: 800px) {
 
             .premios {
-
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -533,12 +534,10 @@
             .premio:nth-child(3),
             .premio:nth-child(4),
             .premio:nth-child(5) {
-
                 grid-column: auto;
             }
 
             .premio:nth-child(5) {
-
                 grid-column: 1 / 3;
 
                 max-width: 50%;
@@ -547,33 +546,29 @@
             }
 
             .header-content h1 {
-
                 font-size: 36px;
             }
 
         }
 
+
         @media (max-width: 600px) {
 
             .premios {
-
                 grid-template-columns: 1fr;
             }
 
             .premio:nth-child(5) {
-
                 grid-column: auto;
 
                 max-width: 100%;
             }
 
             .header-content h1 {
-
                 font-size: 30px;
             }
 
             .header-content h2 {
-
                 font-size: 20px;
             }
 
@@ -587,21 +582,17 @@
 <body>
 
 
-<!-- =====================================================
+<!-- =========================
      ENCABEZADO
-===================================================== -->
+========================= -->
 
 <header>
 
     <div class="header-content">
 
-        <h1>
-            Eco Puntos Bernardino
-        </h1>
+        <h1>Eco Puntos Bernardino</h1>
 
-        <h2>
-            GREEN TECH
-        </h2>
+        <h2>GREEN TECH</h2>
 
         <p>
             ♻️ Recicla • Acumula puntos • Gana premios
@@ -612,20 +603,19 @@
 </header>
 
 
+
 <main class="container">
 
 
-<!-- =====================================================
+<!-- =========================
      PREMIOS
-===================================================== -->
+========================= -->
 
 <section>
 
     <div class="section-title">
 
-        <h2>
-            🏆 Premios
-        </h2>
+        <h2>🏆 Premios</h2>
 
         <p>
             Los cursos con mejores resultados podrán ganar increíbles premios.
@@ -639,13 +629,9 @@
 
         <div class="premio">
 
-            <div class="numero">
-                1
-            </div>
+            <div class="numero">1</div>
 
-            <h3>
-                Mañana Deportiva
-            </h3>
+            <h3>Mañana Deportiva</h3>
 
             <p>
                 Una mañana deportiva en las canchas
@@ -657,13 +643,9 @@
 
         <div class="premio">
 
-            <div class="numero">
-                2
-            </div>
+            <div class="numero">2</div>
 
-            <h3>
-                Día de Película
-            </h3>
+            <h3>Día de Película</h3>
 
             <p>
                 Un día especial para disfrutar
@@ -675,13 +657,9 @@
 
         <div class="premio">
 
-            <div class="numero">
-                3
-            </div>
+            <div class="numero">3</div>
 
-            <h3>
-                Comida para el Curso
-            </h3>
+            <h3>Comida para el Curso</h3>
 
             <p>
                 Una comida para todo el curso.
@@ -693,13 +671,9 @@
 
         <div class="premio">
 
-            <div class="numero">
-                4
-            </div>
+            <div class="numero">4</div>
 
-            <h3>
-                Premio Sorpresa
-            </h3>
+            <h3>Premio Sorpresa</h3>
 
             <p>
                 Una recompensa especial para celebrar
@@ -711,13 +685,9 @@
 
         <div class="premio">
 
-            <div class="numero">
-                5
-            </div>
+            <div class="numero">5</div>
 
-            <h3>
-                Actividad Especial
-            </h3>
+            <h3>Actividad Especial</h3>
 
             <p>
                 Una actividad especial para disfrutar
@@ -732,16 +702,15 @@
 </section>
 
 
-<!-- =====================================================
-     RANKING + CURSOS
-===================================================== -->
+
+<!-- =========================
+     RANKING Y CURSOS
+========================= -->
 
 <section class="tablas-principales">
 
 
-    <!-- =========================
-         RANKING IZQUIERDA
-    ========================= -->
+    <!-- RANKING -->
 
     <div class="panel">
 
@@ -760,21 +729,13 @@
 
                     <tr>
 
-                        <th>
-                            Puesto
-                        </th>
+                        <th>Puesto</th>
 
-                        <th>
-                            Curso
-                        </th>
+                        <th>Curso</th>
 
-                        <th>
-                            Kilogramos (kg)
-                        </th>
+                        <th>Kilogramos (kg)</th>
 
-                        <th>
-                            Puntos
-                        </th>
+                        <th>Puntos</th>
 
                     </tr>
 
@@ -793,9 +754,7 @@
 
 
 
-    <!-- =========================
-         CURSOS DERECHA
-    ========================= -->
+    <!-- CURSOS -->
 
     <div class="panel">
 
@@ -809,6 +768,7 @@
         <div
             id="grados-container"
             class="grados">
+
         </div>
 
     </div>
@@ -817,9 +777,10 @@
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================
      NOTICIAS
-===================================================== -->
+========================= -->
 
 <section>
 
@@ -858,9 +819,10 @@
 </main>
 
 
-<!-- =====================================================
+
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
@@ -880,15 +842,277 @@
 
 
 /* =====================================================
-   DATOS DE LOS CURSOS
+   DATOS DE TODOS LOS CURSOS
 
-   MODIFICA KG Y PUNTOS AQUÍ.
+   PARA CAMBIAR LOS VALORES:
+
+   kg: 0
+   puntos: 0
+
+   Ejemplo:
+
+   kg: 15
+   puntos: 45
+
 ===================================================== */
 
 
 const cursos = [
 
-    /* OCTAVO */
+
+    /* =================================
+       INICIAL
+    ================================= */
+
+    {
+        nombre: "Inicial 1",
+        grado: "Inicial",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "Inicial 2",
+        grado: "Inicial",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       PRIMERO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "1ro A",
+        grado: "1ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "1ro B",
+        grado: "1ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "1ro C",
+        grado: "1ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "1ro D",
+        grado: "1ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       SEGUNDO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "2do A",
+        grado: "2do Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "2do B",
+        grado: "2do Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "2do C",
+        grado: "2do Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "2do D",
+        grado: "2do Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       TERCERO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "3ro A",
+        grado: "3ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "3ro B",
+        grado: "3ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "3ro C",
+        grado: "3ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "3ro D",
+        grado: "3ro Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       CUARTO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "4to A",
+        grado: "4to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "4to B",
+        grado: "4to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "4to C",
+        grado: "4to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "4to D",
+        grado: "4to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       QUINTO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "5to A",
+        grado: "5to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "5to B",
+        grado: "5to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "5to C",
+        grado: "5to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "5to D",
+        grado: "5to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       SEXTO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "6to A",
+        grado: "6to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "6to B",
+        grado: "6to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "6to C",
+        grado: "6to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "6to D",
+        grado: "6to Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       SÉPTIMO BÁSICA MEDIA
+    ================================= */
+
+    {
+        nombre: "7mo A",
+        grado: "7mo Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "7mo B",
+        grado: "7mo Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "7mo C",
+        grado: "7mo Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+    {
+        nombre: "7mo D",
+        grado: "7mo Básica Media",
+        kg: 0,
+        puntos: 0
+    },
+
+
+    /* =================================
+       BÁSICA SUPERIOR - OCTAVO
+    ================================= */
 
     {
         nombre: "8 A",
@@ -926,7 +1150,9 @@ const cursos = [
     },
 
 
-    /* NOVENO */
+    /* =================================
+       NOVENO
+    ================================= */
 
     {
         nombre: "9 A",
@@ -964,7 +1190,9 @@ const cursos = [
     },
 
 
-    /* DÉCIMO */
+    /* =================================
+       DÉCIMO
+    ================================= */
 
     {
         nombre: "10 A",
@@ -1002,7 +1230,9 @@ const cursos = [
     },
 
 
-    /* PRIMERO BACHILLERATO */
+    /* =================================
+       PRIMERO BACHILLERATO
+    ================================= */
 
     {
         nombre: "Primero Ciencias A",
@@ -1040,7 +1270,9 @@ const cursos = [
     },
 
 
-    /* SEGUNDO BACHILLERATO */
+    /* =================================
+       SEGUNDO BACHILLERATO
+    ================================= */
 
     {
         nombre: "Segundo Ciencias A",
@@ -1071,7 +1303,9 @@ const cursos = [
     },
 
 
-    /* TERCERO BACHILLERATO */
+    /* =================================
+       TERCERO BACHILLERATO
+    ================================= */
 
     {
         nombre: "Tercero Ciencias A",
@@ -1086,7 +1320,6 @@ const cursos = [
         kg: 0,
         puntos: 0
     },
-
 
     {
         nombre: "Tercero Ciencias C",
@@ -1119,10 +1352,10 @@ const cursos = [
 ];
 
 
-/* =====================================================
-   CREAR RANKING
-===================================================== */
 
+/* =====================================================
+   CREAR RANKING AUTOMÁTICO
+===================================================== */
 
 function crearRanking() {
 
@@ -1132,29 +1365,23 @@ function crearRanking() {
     ranking.innerHTML = "";
 
 
-    /*
-       Orden:
-       1. Mayor cantidad de KG
-       2. Si hay empate, mayor cantidad de puntos
-    */
-
     const ordenados =
         [...cursos].sort((a, b) => {
 
+            /* Primero ordenar por KG */
+
             if (b.kg !== a.kg) {
-
                 return b.kg - a.kg;
-
             }
+
+            /* Si hay empate ordenar por puntos */
 
             return b.puntos - a.puntos;
 
         });
 
 
-    /*
-       Mostrar solamente los primeros 10.
-    */
+    /* Mostrar solamente los primeros 10 */
 
     const top10 =
         ordenados.slice(0, 10);
@@ -1166,10 +1393,7 @@ function crearRanking() {
             document.createElement("tr");
 
 
-        /*
-           Primeros 5 = destacados.
-           Puestos 6-10 = normales.
-        */
+        /* Los primeros 5 son destacados */
 
         if (index < 5) {
 
@@ -1210,151 +1434,251 @@ function crearRanking() {
 }
 
 
-/* =====================================================
-   CREAR CURSOS PARTICIPANTES
-===================================================== */
 
+/* =====================================================
+   CREAR LOS BLOQUES EDUCATIVOS
+===================================================== */
 
 function crearGrados() {
 
     const container =
-        document.getElementById(
-            "grados-container"
-        );
+        document.getElementById("grados-container");
 
     container.innerHTML = "";
 
 
-    const grados = [
+    /* Organización de los 4 bloques */
 
-        "Octavo Grado",
+    const bloques = [
 
-        "Noveno Grado",
+        {
+            nombre: "🌱 Inicial",
 
-        "Décimo Grado",
+            grados: [
+                "Inicial"
+            ]
+        },
 
-        "Primero Bachillerato",
 
-        "Segundo Bachillerato",
+        {
+            nombre: "📚 Básica Media",
 
-        "Tercero Bachillerato"
+            grados: [
+
+                "1ro Básica Media",
+                "2do Básica Media",
+                "3ro Básica Media",
+                "4to Básica Media",
+                "5to Básica Media",
+                "6to Básica Media",
+                "7mo Básica Media"
+
+            ]
+        },
+
+
+        {
+            nombre: "🎓 Básica Superior",
+
+            grados: [
+
+                "Octavo Grado",
+                "Noveno Grado",
+                "Décimo Grado"
+
+            ]
+        },
+
+
+        {
+            nombre: "🏆 Bachillerato",
+
+            grados: [
+
+                "Primero Bachillerato",
+                "Segundo Bachillerato",
+                "Tercero Bachillerato"
+
+            ]
+        }
 
     ];
 
 
-    grados.forEach(grado => {
+
+    /* Crear cada bloque */
+
+    bloques.forEach(bloque => {
 
 
-        const cursosDelGrado =
-            cursos.filter(
-                curso => curso.grado === grado
-            );
-
-
-        const div =
+        const bloqueDiv =
             document.createElement("div");
 
 
-        div.className = "grado";
+        bloqueDiv.className =
+            "bloque-educativo";
 
 
-        div.innerHTML = `
+        bloqueDiv.innerHTML = `
 
-            <button
-                class="grado-header"
-                onclick="toggleGrado(this)"
-            >
+            <div class="bloque-titulo">
 
-                <span>
-                    ${grado}
-                </span>
+                ${bloque.nombre}
 
-                <span class="flecha">
-                    ▼
-                </span>
+            </div>
 
-            </button>
-
-
-            <div class="grado-content">
-
-                <div class="table-container">
-
-                    <table class="curso-table">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    Curso
-                                </th>
-
-                                <th>
-                                    Kilogramos (kg)
-                                </th>
-
-                                <th>
-                                    Puntos
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-                            ${
-
-                                cursosDelGrado
-
-                                .map(curso => `
-
-                                    <tr>
-
-                                        <td>
-                                            ${curso.nombre}
-                                        </td>
-
-                                        <td class="kg">
-                                            ${curso.kg} kg
-                                        </td>
-
-                                        <td class="points">
-                                            ${curso.puntos}
-                                        </td>
-
-                                    </tr>
-
-                                `)
-
-                                .join("")
-
-                            }
-
-                        </tbody>
-
-                    </table>
-
-                </div>
+            <div class="bloque-contenido">
 
             </div>
 
         `;
 
 
-        container.appendChild(div);
+        const contenido =
+            bloqueDiv.querySelector(
+                ".bloque-contenido"
+            );
+
+
+        /* Crear los grados dentro de cada bloque */
+
+        bloque.grados.forEach(grado => {
+
+
+            const cursosDelGrado =
+                cursos.filter(
+                    curso =>
+                    curso.grado === grado
+                );
+
+
+            const gradoDiv =
+                document.createElement("div");
+
+
+            gradoDiv.className =
+                "grado";
+
+
+            gradoDiv.innerHTML = `
+
+                <button
+                    class="grado-header"
+                    onclick="toggleGrado(this)"
+                >
+
+                    <span>
+
+                        ${grado}
+
+                    </span>
+
+
+                    <span class="flecha">
+
+                        ▼
+
+                    </span>
+
+                </button>
+
+
+                <div class="grado-content">
+
+
+                    <div class="table-container">
+
+
+                        <table class="curso-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Curso
+                                    </th>
+
+                                    <th>
+                                        Kilogramos (kg)
+                                    </th>
+
+                                    <th>
+                                        Puntos
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                ${cursosDelGrado.map(curso => `
+
+                                    <tr>
+
+                                        <td>
+
+                                            ${curso.nombre}
+
+                                        </td>
+
+
+                                        <td class="kg">
+
+                                            ${curso.kg} kg
+
+                                        </td>
+
+
+                                        <td class="points">
+
+                                            ${curso.puntos}
+
+                                        </td>
+
+                                    </tr>
+
+                                `).join("")}
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+
+            contenido.appendChild(
+                gradoDiv
+            );
+
+        });
+
+
+        container.appendChild(
+            bloqueDiv
+        );
 
     });
 
 }
 
 
-/* =====================================================
-   ABRIR / CERRAR GRADOS
-===================================================== */
 
+/* =====================================================
+   ABRIR Y CERRAR GRADOS
+===================================================== */
 
 function toggleGrado(button) {
 
@@ -1368,8 +1692,9 @@ function toggleGrado(button) {
 }
 
 
+
 /* =====================================================
-   INICIAR
+   INICIAR PÁGINA
 ===================================================== */
 
 crearRanking();
@@ -1379,6 +1704,7 @@ crearGrados();
 
 </script>
 
+
 </body>
+
 </html>
-```
