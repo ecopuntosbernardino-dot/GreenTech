@@ -63,6 +63,24 @@
         }
 
 
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .logo-bernardino {
+            width: 92px;
+            height: 92px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
         .header-content h1 {
 
             font-size: 48px;
@@ -595,6 +613,7 @@
 
             box-shadow:
                 0 7px 18px rgba(70, 90, 55, 0.15);
+            text-align: center;
 
         }
 
@@ -616,7 +635,8 @@
 
             display: flex;
 
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
 
             gap: 10px;
 
@@ -644,6 +664,19 @@
 
             color: #4f7046;
 
+        }
+
+        .advertencia {
+            max-width: 850px;
+            margin: 22px auto 0;
+            padding: 16px 20px;
+            border: 2px solid #c99516;
+            border-radius: 12px;
+            background: #fff1b8;
+            color: #6b5212;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5;
         }
 
 
@@ -777,17 +810,25 @@
 
     <div class="header-content">
 
-        <h1>
-            EcoSchool
-        </h1>
+        <img
+            src="logo-bernardino.png"
+            alt="Logo de la Unidad Educativa Cardenal Bernardino Echeverría Ruiz"
+            class="logo-bernardino"
+        >
 
-        <h2>
-            GREEN TECH
-        </h2>
+        <div class="header-text">
+            <h1>
+                EcoSchool
+            </h1>
 
-        <p>
-            ♻️ Recicla • Acumula kilogramos • Gana premios
-        </p>
+            <h2>
+                GREEN TECH
+            </h2>
+
+            <p>
+                ♻️ Recicla • Acumula kilogramos • Gana premios
+            </p>
+        </div>
 
     </div>
 
@@ -1073,6 +1114,11 @@
         </div>
 
 
+        <div class="advertencia">
+            ⚠️ Las recolecciones serán SOLO los Miércoles, dado que la institución no es un centro de acopio.
+        </div>
+
+
     </div>
 
 </section>
@@ -1128,32 +1174,32 @@ const cursos = [
     ========================================= */
 
     {
-        nombre: "Inicial 2 - 3 años A",
-        grado: "Inicial 2 - 3 años",
+        nombre: "Inicial 3 años A",
+        grado: "Inicial 3 años",
         kg: 12.9
     },
 
     {
-        nombre: "Inicial 2 - 3 años B",
-        grado: "Inicial 2 - 3 años",
+        nombre: "Inicial 3 años B",
+        grado: "Inicial 3 años",
         kg: 0
     },
 
     {
-        nombre: "Inicial 2 - 4 años A",
-        grado: "Inicial 2 - 4 años",
+        nombre: "Inicial 4 años A",
+        grado: "Inicial 4 años",
         kg: 0
     },
 
     {
-        nombre: "Inicial 2 - 4 años B",
-        grado: "Inicial 2 - 4 años",
+        nombre: "Inicial 4 años B",
+        grado: "Inicial 4 años",
         kg: 0
     },
 
     {
-        nombre: "Inicial 2 - 4 años C",
-        grado: "Inicial 2 - 4 años",
+        nombre: "Inicial 4 años C",
+        grado: "Inicial 4 años",
         kg: 0
     },
 
@@ -1725,8 +1771,8 @@ function crearGrados() {
 
             grados: [
 
-                "Inicial 2 - 3 años",
-                "Inicial 2 - 4 años"
+                "Inicial 3 años",
+                "Inicial 4 años"
 
             ]
 
